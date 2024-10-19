@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 
 const logoOptions = [
@@ -41,10 +42,12 @@ const LogoOptions = ({ logo, onLogoSelect, onFileChange }) => {
             } transition duration-200 hover:opacity-80`}
             onClick={() => onLogoSelect(option.value)}
           >
-            <img
+            <Image
               src={option.img}
               alt="Logo"
               className="object-cover w-full h-auto max-w-[50px] max-h-[50px] aspect-square"
+              height={50}
+              width={50}
             />
           </div>
         ))}
